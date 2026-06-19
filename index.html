@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'DM Sans', sans-serif;
+        }
+        
         h1 {
             text-align: center;
             font-family: 'DM Serif Display', serif;
@@ -14,24 +20,94 @@
             font-size: 3.5rem;
             color: #1C1917;
         }
+        h2 {
+            text-align: Left;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            font-size: 2.5rem;
+            color: #1C1917;
+        }
         p {
             text-align: justify;
             font-family:'DM Sans', sans-serif;
-            font-size: 1.05rem;
-            line-height: 1.6;
+            font-size: 1.5rem;
+            line-height: 1.5;
         }
         body {
             background-color: #F5F0EB;
             margin 0;
             padding 0;
         }
-            
+        
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+
+        .section-light {
+            background-color:#E7E2DC;
+            color: #1C1917;
+        }
+
+        .section-dark {
+            background-color: #78716C;
+            color: #1C1917; 
+        }
+
+        .section-accent {
+            background-color: #D97706;
+            color: #1C1917;
+        }
+
+        .section-accent h2 {
+            color: #D97706
+        }
+        
     </style>
+
+    
 </head>
 <body>
 
-    <h1>Thoun Thant Nandi</h1>
-    <p>Engineering design portfolio in progress. Stay tuned for updates.</p>
+    <section class="section-light">
+        <div class="container">
+            <h2>Thoun Thant Nandi</h2>
+            <p>I focus on design at the intersection of materials, machines, and people.</p>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container">
+            <h2>L-PBF ML Project</h2>
+            <p>Coming soon. Courtesy of Morris Lab at UCLA and the Starfire Hub at Lawrence Livermore.</p>
+        </div>
+    </section>
+
+    <section class="section-accent">
+        <div class="container">
+            <h2>Foam Lattices</h2>
+            <p>Coming soon. Baseball equipment project courtesy of Easton Labs.</p>
+        </div>
+    </section>
+
+        <section class="section-dark">
+        <div class="container">
+            <h2>Designing an Organization</h2>
+            <p>Coming soon. Rebuilding a student organization.</p>
+        </div>
+    </section>
+
+            <section class="section-light">
+        <div class="container">
+            <h2>How to Tell A Story</h2>
+            <p>Coming soon... or is it?</p>
+        </div>
+    </section>
 
 </body>
 </html>
