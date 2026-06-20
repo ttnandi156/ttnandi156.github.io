@@ -50,7 +50,6 @@
             margin: 0;
         }
 
-        /* ---------- Title block ---------- */
         .hero {
             background-color: var(--bg-dark);
             color: var(--text-light);
@@ -61,11 +60,11 @@
         .hero p {
             color: var(--text-light);
             font-size: 1.15rem;
-            max-width: 560px;
+            max-width: 100%;
+            width: max-content;
             font-weight: 300;
         }
 
-        /* ---------- Project grid ---------- */
         .grid-wrapper {
             background-color: var(--bg-dark);
             padding: 0 8vw 100px 8vw;
@@ -123,7 +122,6 @@
             text-transform: uppercase;
         }
 
-        /* ---------- Footer ---------- */
         footer {
             background-color: var(--bg-dark);
             color: var(--text-light);
@@ -154,13 +152,11 @@
 </head>
 <body>
 
-    <!-- Title block -->
     <section class="hero">
         <h1>Thoun Thant Nandi</h1>
         <p>I focus on design at the intersection of materials, machines, and people.</p>
     </section>
 
-    <!-- Project grid: 2 blocks per row, 60-70% opacity -->
     <section class="grid-wrapper">
         <div class="grid">
             <a class="block block-blue" href="lpbf-ml.html">
@@ -189,7 +185,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Thoun Thant Nandi. Website build in progress.</p>
     </footer>
