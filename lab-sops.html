@@ -129,6 +129,7 @@
             opacity: 0.68;
             border: 1px solid rgba(24, 28, 3, 0.18);
             transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
         }
 
         .block:hover,
@@ -222,6 +223,64 @@
             opacity: 0.6;
         }
 
+        /* ---------- PDF Modal ---------- */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow: auto;
+        }
+
+        .pdf-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pdf-modal-content {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            background-color: var(--bg-dark);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pdf-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--text-light);
+            color: var(--bg-dark);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .pdf-modal-close:hover {
+            transform: scale(1.1);
+        }
+
+        .pdf-modal iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* ---------- Footer ---------- */
         footer {
             background-color: var(--bg-dark);
@@ -248,6 +307,10 @@
             .grid-wrapper {
                 padding: 0 6vw 70px 6vw;
             }
+            .pdf-modal-content {
+                width: 95%;
+                height: 95%;
+            }
         }
     </style>
 </head>
@@ -273,21 +336,51 @@
                 </div>
             </a>
 
-            <a class="block block-blue" href="pdfs/Morris_Lab_Abaqus_Hoffman2_Cluster_SOP.pdf" target="_blank">
+            <div class="block block-blue" onclick="openPDF('pdfs/Morris_Lab_Abaqus_Hoffman2_Cluster_SOP.pdf')">
                 <div class="block-image"><span>Image coming soon</span></div>
                 <div class="block-body">
                     <span class="block-tag">Simulation</span>
                     <h2>Abaqus on Hoffman2</h2>
                     <p>Instructions for running Abaqus simulations on the Hoffman2 cluster.</p>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <button class="pdf-modal-close" onclick="closePDF()">&times;</button>
+            <iframe id="pdfFrame"></iframe>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Morris Lab. Website in progress.</p>
     </footer>
+
+    <script>
+        function openPDF(pdfPath) {
+            const modal = document.getElementById('pdfModal');
+            const frame = document.getElementById('pdfFrame');
+            frame.src = pdfPath;
+            modal.classList.add('active');
+        }
+
+        function closePDF() {
+            const modal = document.getElementById('pdfModal');
+            modal.classList.remove('active');
+            document.getElementById('pdfFrame').src = '';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDF();
+            }
+        });
+    </script>
 
 </body>
 </html>
