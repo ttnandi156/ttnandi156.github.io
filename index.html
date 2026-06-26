@@ -9,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #181C03;
-            --text-light: #F3FAD1;
-            --blue: #49BDD4;
-            --green: #4FC49D;
+            --bg-dark-primary: #153243;
+            --bg-dark-secondary: #284B63;
+            --accent: #B4B8AB;
+            --text-light-primary: #F4F9E9;
+            --text-light-secondary: #EEF0EB;
         }
 
         * {
@@ -22,7 +23,7 @@
         html, body {
             margin: 0;
             padding: 0;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-dark-primary);
             font-family: 'IBM Plex Sans', sans-serif;
         }
 
@@ -30,7 +31,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: clamp(2.5rem, 6vw, 4rem);
-            color: var(--text-light);
+            color: var(--text-light-primary);
             margin: 0 0 16px 0;
             letter-spacing: -0.01em;
         }
@@ -39,7 +40,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1.6rem;
-            color: var(--bg-dark);
+            color: var(--text-light-primary);
             margin: 0 0 10px 0;
         }
 
@@ -47,7 +48,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
-            color: var(--text-light);
+            color: var(--text-light-primary);
             margin: 0 0 8px 0;
             display: flex;
             align-items: center;
@@ -65,14 +66,14 @@
 
         /* ---------- Title block ---------- */
         .hero {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-dark-primary);
+            color: var(--text-light-primary);
             padding: 120px 8vw 100px 8vw;
             text-align: left;
         }
 
         .hero p {
-            color: var(--text-light);
+            color: var(--text-light-secondary);
             font-size: 1.15rem;
             max-width: 100%;
             width: max-content;
@@ -81,7 +82,7 @@
 
         /* ---------- Project grid ---------- */
         .grid-wrapper {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-dark-primary);
             padding: 0 8vw 100px 8vw;
         }
 
@@ -99,7 +100,7 @@
             font-size: 0.75rem;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--text-light);
+            color: var(--text-light-secondary);
             opacity: 0.75;
             white-space: nowrap;
         }
@@ -108,7 +109,7 @@
             content: "";
             flex: 1;
             height: 1px;
-            background: rgba(243, 250, 209, 0.15);
+            background: rgba(180, 184, 171, 0.25);
         }
 
         .grid {
@@ -126,7 +127,7 @@
             border-radius: 4px;
             overflow: hidden;
             opacity: 0.68;
-            border: 1px solid rgba(24, 28, 3, 0.18);
+            border: 1px solid rgba(180, 184, 171, 0.2);
             transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
             cursor: pointer;
         }
@@ -139,16 +140,16 @@
         }
 
         .block:focus-visible {
-            outline: 2px solid var(--text-light);
+            outline: 2px solid var(--text-light-primary);
             outline-offset: 3px;
         }
 
         .block-blue {
-            background-color: var(--blue);
+            background-color: var(--bg-dark-secondary);
         }
 
         .block-green {
-            background-color: var(--green);
+            background-color: var(--accent);
         }
 
         .block-image {
@@ -159,12 +160,12 @@
             justify-content: center;
             background-image:
                 repeating-linear-gradient(45deg,
-                    rgba(24, 28, 3, 0.06) 0px,
-                    rgba(24, 28, 3, 0.06) 1px,
+                    rgba(21, 50, 67, 0.06) 0px,
+                    rgba(21, 50, 67, 0.06) 1px,
                     transparent 1px,
                     transparent 14px);
-            background-color: rgba(24, 28, 3, 0.05);
-            border-bottom: 1px solid rgba(24, 28, 3, 0.15);
+            background-color: rgba(21, 50, 67, 0.05);
+            border-bottom: 1px solid rgba(180, 184, 171, 0.15);
         }
 
         .block-image span {
@@ -173,7 +174,7 @@
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--bg-dark);
+            color: var(--text-light-primary);
             opacity: 0.4;
         }
 
@@ -191,13 +192,13 @@
             font-size: 0.65rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--bg-dark);
+            color: var(--text-light-primary);
             opacity: 0.55;
             margin-bottom: 10px;
         }
 
         .block p {
-            color: var(--bg-dark);
+            color: var(--text-light-primary);
         }
 
         .block .status {
@@ -210,7 +211,7 @@
             font-size: 0.7rem;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: var(--bg-dark);
+            color: var(--text-light-primary);
         }
 
         .block .status::before {
@@ -218,7 +219,7 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background-color: var(--bg-dark);
+            background-color: var(--text-light-primary);
             opacity: 0.6;
         }
 
@@ -248,7 +249,7 @@
             height: 20px;
             flex-shrink: 0;
             transition: transform 0.3s ease;
-            color: var(--text-light);
+            color: var(--text-light-primary);
         }
 
         .expandable-section.collapsed .toggle-icon {
@@ -283,7 +284,7 @@
             text-decoration: none;
             padding: 20px 24px;
             border-radius: 4px;
-            border: 1px solid rgba(24, 28, 3, 0.18);
+            border: 1px solid rgba(180, 184, 171, 0.2);
             opacity: 0.68;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             animation: slideUp 0.5s ease-out forwards;
@@ -317,7 +318,7 @@
         }
 
         .small-block:focus-visible {
-            outline: 2px solid var(--text-light);
+            outline: 2px solid var(--text-light-primary);
             outline-offset: 2px;
         }
 
@@ -327,7 +328,7 @@
             font-size: 0.6rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--bg-dark);
+            color: var(--text-light-secondary);
             opacity: 0.55;
             margin-bottom: 8px;
             display: inline-block;
@@ -337,13 +338,13 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 0.95rem;
-            color: var(--bg-dark);
+            color: var(--text-light-primary);
             margin: 0 0 6px 0;
         }
 
         .small-block p {
             font-size: 0.85rem;
-            color: var(--bg-dark);
+            color: var(--text-light-secondary);
             flex: 1;
             margin-bottom: 8px;
         }
@@ -357,7 +358,7 @@
             font-size: 0.6rem;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: var(--bg-dark);
+            color: var(--text-light-secondary);
         }
 
         .small-block .status::before {
@@ -365,7 +366,7 @@
             width: 5px;
             height: 5px;
             border-radius: 50%;
-            background-color: var(--bg-dark);
+            background-color: var(--text-light-secondary);
             opacity: 0.6;
         }
 
@@ -393,7 +394,7 @@
             width: 90%;
             height: 90%;
             max-width: 1200px;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-dark-primary);
             border-radius: 8px;
             overflow: hidden;
         }
@@ -402,8 +403,8 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background-color: var(--text-light);
-            color: var(--bg-dark);
+            background-color: var(--text-light-primary);
+            color: var(--bg-dark-primary);
             border: none;
             border-radius: 50%;
             width: 40px;
@@ -429,15 +430,15 @@
 
         /* ---------- Footer ---------- */
         footer {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-dark-primary);
+            color: var(--text-light-secondary);
             padding: 32px 8vw;
             text-align: left;
-            border-top: 1px solid rgba(243, 250, 209, 0.15);
+            border-top: 1px solid rgba(180, 184, 171, 0.25);
         }
 
         footer p {
-            color: var(--text-light);
+            color: var(--text-light-secondary);
             font-size: 0.8rem;
             font-weight: 300;
             font-family: 'IBM Plex Sans', sans-serif;
@@ -480,6 +481,84 @@
     <!-- Project grid -->
     <section class="grid-wrapper">
         <div class="section-label"><span>Selected Work</span></div>
+        <div class="grid">
+            <div class="block block-blue" onclick="toggleSection('lab-projects')">
+                <div class="block-image"><span>Lab</span></div>
+                <div class="block-body">
+                    <span class="block-tag">Lab Resources</span>
+                    <h2>Lab Projects</h2>
+                    <p>Collection of ongoing and past lab projects, experiments, and outcomes.</p>
+                    <span class="status">Explore</span>
+                </div>
+            </div>
+
+            <div class="block block-green" onclick="toggleSection('lab-sops')">
+                <div class="block-image"><span>Lab</span></div>
+                <div class="block-body">
+                    <span class="block-tag">Lab Resources</span>
+                    <h2>Lab SOPs</h2>
+                    <p>Standard operating procedures, safety checklists, and lab guidelines.</p>
+                    <span class="status">Explore</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lab Projects Section -->
+        <div id="lab-projects" class="expandable-section collapsed">
+            <div class="section-header" onclick="toggleSection('lab-projects')">
+                <span class="toggle-icon">▼</span>
+                <h3>Lab Projects &amp; Publications</h3>
+            </div>
+            <div class="section-content">
+                <div class="small-grid">
+                    <div class="small-block small-block-green">
+                        <span class="small-block-tag">Research</span>
+                        <h4>LLNL Starfire</h4>
+                        <p>Additive manufacturing research with Lawrence Livermore National Lab.</p>
+                        <span class="status">Coming soon</span>
+                    </div>
+
+                    <div class="small-block small-block-green">
+                        <span class="small-block-tag">Research</span>
+                        <h4>Baseball Equipment</h4>
+                        <p>Materials science research for sports equipment design.</p>
+                        <span class="status">Coming soon</span>
+                    </div>
+
+                    <div class="small-block small-block-green">
+                        <span class="small-block-tag">Research</span>
+                        <h4>Lattice Modeling</h4>
+                        <p>Computational modeling and analysis of lattice structures.</p>
+                        <span class="status">Coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lab SOPs Section -->
+        <div id="lab-sops" class="expandable-section collapsed">
+            <div class="section-header" onclick="toggleSection('lab-sops')">
+                <span class="toggle-icon">▼</span>
+                <h3>Morris Lab SOPs</h3>
+            </div>
+            <div class="section-content">
+                <div class="small-grid">
+                    <div class="small-block small-block-blue" onclick="openPDF('Morris_Lab_Abaqus_Hoffman2_Cluster_SOP.pdf')">
+                        <span class="small-block-tag">Cluster Access</span>
+                        <h4>Hoffman2 Cluster Access</h4>
+                        <p>Guide to accessing and using the Hoffman2 computing cluster.</p>
+                        <span class="status">View</span>
+                    </div>
+
+                    <div class="small-block small-block-blue" onclick="openPDF('Morris_Lab_Abaqus_Hoffman2_Cluster_SOP.pdf')">
+                        <span class="small-block-tag">Simulation</span>
+                        <h4>Abaqus on Hoffman2</h4>
+                        <p>Instructions for running Abaqus simulations on the Hoffman2 cluster.</p>
+                        <span class="status">View</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- MRS ARK Program 2026-27 Section -->
         <div id="mrs-ark-program" class="expandable-section collapsed">
@@ -541,11 +620,11 @@
 
         // Add color classes for small blocks
         document.querySelectorAll('.small-block-green').forEach(block => {
-            block.style.backgroundColor = 'var(--green)';
+            block.style.backgroundColor = 'var(--accent)';
         });
 
         document.querySelectorAll('.small-block-blue').forEach(block => {
-            block.style.backgroundColor = 'var(--blue)';
+            block.style.backgroundColor = 'var(--bg-dark-secondary)';
         });
     </script>
 
