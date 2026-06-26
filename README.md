@@ -1,1 +1,2 @@
-Personal projects website # thounthantnandi.github.io
+# thounthantnandi.github.io
+A professional + personal projects website.
