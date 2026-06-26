@@ -451,9 +451,6 @@
         }
 
         @media (max-width: 700px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
             .small-grid {
                 grid-template-columns: 1fr;
             }
@@ -481,27 +478,6 @@
     <!-- Project grid -->
     <section class="grid-wrapper">
         <div class="section-label"><span>Selected Work</span></div>
-        <div class="grid">
-            <div class="block block-blue" onclick="toggleSection('lab-projects')">
-                <div class="block-image"><span>Lab</span></div>
-                <div class="block-body">
-                    <span class="block-tag">Lab Resources</span>
-                    <h2>Lab Projects</h2>
-                    <p>Collection of ongoing and past lab projects, experiments, and outcomes.</p>
-                    <span class="status">Explore</span>
-                </div>
-            </div>
-
-            <div class="block block-green" onclick="toggleSection('lab-sops')">
-                <div class="block-image"><span>Lab</span></div>
-                <div class="block-body">
-                    <span class="block-tag">Lab Resources</span>
-                    <h2>Lab SOPs</h2>
-                    <p>Standard operating procedures, safety checklists, and lab guidelines.</p>
-                    <span class="status">Explore</span>
-                </div>
-            </div>
-        </div>
 
         <!-- Lab Projects Section -->
         <div id="lab-projects" class="expandable-section collapsed">
